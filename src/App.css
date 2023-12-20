@@ -1,0 +1,186 @@
+/* Apply styles to all elements, setting a default font and box-sizing */
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+/* Styling for the body of the document */
+body {
+  background: #333;
+  color: rgb(204, 238, 255);
+  max-width: 400px;
+  padding: 1rem;
+  margin: 0 auto;
+  overflow-y: hidden;
+}
+
+/* Styles for the form used to add new items */
+.new-item-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+/* Styles for a row within a form */
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.add_btn{
+  padding:.5rem 0;
+  font-size: 2rem;
+}
+/* Styles for a generic button */
+.btn {
+  background: hsl(200, 100%, 50%, 0.1);
+  border: 1px solid rgb(0, 170, 255);
+  color: rgb(0, 170, 255);
+  padding: 0.25em 0.5em;
+  border-radius: 0.25em;
+  cursor: pointer;
+  outline: none;
+}
+
+.add-btn{
+  background: hsl(200, 100%, 50%, 0.1);
+  border: 1px solid rgb(0, 170, 255);
+  color: rgb(0, 170, 255);
+  padding: 0.4em;
+  border-radius: 0.25em;
+  cursor: pointer;
+  outline: none;
+  font-size: 1.5rem;
+}
+
+/* Hover and focus styles for the button */
+.btn:hover,
+.btn:focus-visible {
+  background: hsl(200, 100%, 50%, 0.2);
+}
+
+/* Styles for a danger-themed button */
+.btn.btn-danger {
+  background: hsl(0, 100%, 40%, 0.1);
+  border: 1px solid hsl(0, 100%, 40%);
+  color: hsl(0, 100%, 40%);
+}
+
+/* Hover and focus styles for the danger-themed button */
+.btn.btn-danger:hover,
+.btn.btn-danger:focus-visible {
+  background: hsl(0, 100%, 40%, 0.2);
+}
+
+/* Styles for input elements within the new item form */
+.new-item-form input {
+  outline: none;
+  border: 1px solid hsl(200, 100%, 40%);
+  background: hsl(200, 100%, 30%);
+  border-radius: 0.25em;
+  padding: 0.25em 0.5em;
+  color: hsl(200, 100%, 90%);
+  height: 3.3rem;
+  font-size: 1.8rem;
+}
+
+/* Focus styles for the input element */
+.new-item-form input:focus {
+  border: 1px solid hsl(200, 100%, 70%);
+}
+
+/* Styles for a header element */
+.header {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+
+/* Styles for the overall structure of the list */
+.list {
+  /* margin: 0; */
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  overflow-y: scroll;
+  scroll-behavior:smooth;
+  
+  height: 25rem;
+}
+
+/* Styles for individual list items */
+.list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color:#545151;
+  border-radius: 0.5rem;
+  padding: 0.4rem;
+}
+
+/* Styles for labels within list items */
+.list li label {
+  display: flex;
+  gap: 0.25rem;
+  cursor: pointer;
+  align-items: center;
+}
+
+
+/* Styling for list items with checked input */
+.list li:has(input:checked) label {
+  color: hsl(200, 20%, 40%);
+}
+
+/* Focus styles for labels within list items */
+.list li:has(input:focus-visible) label {
+  outline: 1px solid hsl(200, 100%, 50%);
+}
+
+/* Styles for the hidden input within list items */
+.list li input {
+  outline: none;
+  width: 0;
+  height: 0;
+  appearance: none;
+  pointer-events: none;
+  position: absolute;
+}
+
+/* Styles for the checkbox visual representation before the label */
+.list li label::before {
+  content: "";
+  display: block;
+  width: 0.9rem;
+  height: 0.9rem;
+  background: hsl(200, 100%, 90%);
+  border-radius: 0.25em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Hover styles for the checkbox visual representation before the label */
+.list li label:hover::before {
+  background: hsl(200, 100%, 80%);
+}
+
+/* Checked state styles for the checkbox visual representation before the label */
+.list li:has(input:checked) label::before {
+  content: "✔";
+  background: hsl(200, 100%, 40%);
+  color: hsl(200, 100%, 90%);
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+/* Checked state hover styles for the checkbox visual representation before the label */
+.list li:has(input:checked) label:hover::before {
+  background: hsl(200, 100%, 30%);
+}
