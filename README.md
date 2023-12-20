@@ -18,8 +18,8 @@ Welcome to the React Todo Application project! This project is a simple React ap
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/bharatbhusal/todo-list.git
-   cd todo-list
+   git clone https://github.com/TParamanik/Todo-list.git
+   cd Todo-list
    ```
 
 2. **Install Dependencies:**
